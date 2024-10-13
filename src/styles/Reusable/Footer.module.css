@@ -1,0 +1,58 @@
+footer{
+    background-color: rgb(37, 134, 114);
+}
+.addressSection{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+.address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+.address h3{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.brand h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+.brand img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.brand hr{
+    width: 40%;
+    margin: 1rem;
+}
+.claim p{
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+@media screen  and (max-width:768px){
+    .addressSection{
+        flex-wrap: wrap;
+    }
+    .address{
+        width: 100vw;
+    }
+    
+}

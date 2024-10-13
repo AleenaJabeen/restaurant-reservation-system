@@ -1,0 +1,88 @@
+.featuresSection{
+    background-color: rgb(37, 134, 114);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100dvh;
+}
+.chef{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+}
+.chef h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: white;
+}
+.chef h3{
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.chef p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+.chef button{
+    font-size: 1.25rem;
+    padding: .75rem 1.5rem;
+    background-color: transparent;
+    border: 1.5px solid rgb(138, 138, 61);
+    color: white;
+}
+.chef button:hover{
+    background-color: rgb(138, 138, 61);
+}
+.featuresImg img{
+    height:480px;
+    width: 400px;
+    object-fit: cover;
+}
+.featuresImg .chefImg{
+    height: 150px;
+    width: 120px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 230%;
+    right: 42%;
+
+}
+@media screen and (max-width: 950px){
+    .chefImg{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .featuresSection{
+        flex-wrap: wrap-reverse;
+    }
+.chef{
+    width: 100vw;
+padding-inline: 2rem;
+}   
+.chef h2{
+    font-size: 3rem;
+} 
+.chef h3{
+    font-size: 2rem;
+}
+.featuresImg img{
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}
+.chefImg{
+    display: none;
+}
+}

@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 105, 89);
+    padding: 1rem;
+}
+
+.brand {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    gap: 1rem;
+}
+
+.brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.brand img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menuIcon {
+    display: none; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 1rem; 
+}
+
+.navbar ul li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid white; 
+}
+
+.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgb(25, 105, 89); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    z-index: 1000; 
+}
+
+.active ul {
+    flex-direction: column; 
+    width: 100%; 
+}
+
+.active li {
+    margin: 20px 0; 
+}
+
+.bookBtn button {
+    padding: .5rem .75rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color:rgb(25, 105, 89); 
+    background-color:white; 
+}
+
+.bookBtn button:hover {
+    background-color: rgb(25, 105, 89);
+    border: 2px solid white; 
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; 
+    }   
+   
+        .menuIcon {
+            position: relative; 
+            display: block;
+            z-index: 1001; 
+        }
+       
+    
+
+    .navbar.active {
+        display: flex; 
+        gap: 1rem;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+        flex-direction: column; 
+        width: 100vw;
+        height: 100vh; 
+        align-items: center;
+    }
+}

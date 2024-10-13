@@ -1,0 +1,90 @@
+.reserveSection{
+    background-color: rgb(25, 105, 89);
+    color: white;
+    height: 100vh;
+}
+.reserveSection h2{
+    font-size: 3rem;
+    opacity: 0.5;
+   text-align: center;
+   padding-top: 1rem;
+}
+/*Reservation Form styling*/
+.reservationForm{
+    display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+.formInputs h2{
+    opacity: 1;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.formInputs{
+    display: flex;
+    justify-content:center; 
+    align-items: center; 
+    gap: 2rem; 
+}
+.formInputs input {
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    padding: 0.5rem; /* Padding inside the input fields */
+}
+
+.formInputs label{
+    font-size: 1.5rem;
+    color: white;
+}   
+.formInputs textarea{
+    height: auto;
+}
+.reserveBtn button{
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding:.5rem 1rem;
+
+}
+/*side Imgs*/
+.reserveImg img{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-top-left-radius:50% ;
+}
+
+input:focus{
+    outline: none;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .reservationForm{
+        flex-wrap: wrap-reverse;
+    }
+    .formInputs{
+        width: 100vw;
+    }
+    .reserveImg img{
+        border-radius: 0;
+    }
+    .formInputs input{
+        width: 100%;
+    }
+}
