@@ -1,15 +1,14 @@
-// src/CheckHistory.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { getDatabase } from "firebase/database";
-import { app } from "../../firebase.js";  // Ensure firebase is properly set up
-import ReservationHistory from './ReservationHistory.js';  // Import the class
-import styles from '../../styles/Reservations/CheckHistory.module.css'
+import { app } from "../../firebase.js";
+import ReservationHistory from "./ReservationHistory.js";
+import styles from "../../styles/Reservations/CheckHistory.module.css";
 
 const db = getDatabase(app);
 
 const CheckHistory = () => {
-  const [email, setEmail] = useState('');
-  const [reservations, setReservations] = useState([]);  // Corrected to 'reservations' for consistency
+  const [email, setEmail] = useState("");
+  const [reservations, setReservations] = useState([]); // Corrected to 'reservations' for consistency
   const [error, setError] = useState(null);
 
   const handleEmailChange = (e) => {
@@ -19,40 +18,39 @@ const CheckHistory = () => {
   const handleFetchReservations = async (e) => {
     e.preventDefault();
 
-    // Use 'new' to create an instance of ReservationHistory
     const history = new ReservationHistory(email, db);
 
     try {
-      const data = await history.fetchAllReservations();  // Fetch all reservations
-      setReservations(Object.values(data || {}));  // Convert object to array, fallback to empty object
+      const data = await history.fetchAllReservations();
+      setReservations(Object.values(data || {}));
       setError(null);
     } catch (err) {
       setError(err.message);
-      setReservations([]);  // Clear reservations on error
+      setReservations([]);
     }
   };
 
   return (
-    <section id='checkHistory' className={styles.historySection}>
-       <h2>Reservation History</h2>
-    <div className={styles.emailCheck}>
-      <form onSubmit={handleFetchReservations}>
-        <label>Enter your Email to check your reservation history</label>
-        <input
-          type="email"
-          value={email}
-          onChange={handleEmailChange}
-          placeholder="Email"
-          required
-        />
-        <div className={styles.chkReserveBtn}>
-        <button type="submit">Check Your Reservations</button>
-        </div>
-      </form>
+    <section id="checkHistory" className={styles.historySection}>
+      <h2>Reservation History</h2>
+      <div className={styles.emailCheck}>
+        <form onSubmit={handleFetchReservations}>
+          <label>Enter your Email to check your reservation history</label>
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Email"
+            required
+          />
+          <div className={styles.chkReserveBtn}>
+            <button type="submit">Check Your Reservations</button>
+          </div>
+        </form>
       </div>
 
       {/* Display error message if any */}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
       {/* Display reservations if available */}
       {reservations.length > 0 && (
@@ -66,18 +64,20 @@ const CheckHistory = () => {
                   <th>Date</th>
                   <th>Time</th>
                   <th>Guests</th>
-                  </tr>
-                  <tr>
-                    <td>{reservation.name}</td>
-                    <td>{reservation.date}</td>
-                    <td>{reservation.time}</td>
-                    <td>{reservation.guests}</td>
-                  </tr>
-                  </table>
+                </tr>
+                <tr>
+                  <td>{reservation.name}</td>
+                  <td>{reservation.date}</td>
+                  <td>{reservation.time}</td>
+                  <td>{reservation.guests}</td>
+                </tr>
+              </table>
               <hr />
             </div>
           ))}
-           <p className={styles.totalReserves}>Total Reservations:{reservations.length}</p>
+          <p className={styles.totalReserves}>
+            Total Reservations:{reservations.length}
+          </p>
         </div>
       )}
     </section>
