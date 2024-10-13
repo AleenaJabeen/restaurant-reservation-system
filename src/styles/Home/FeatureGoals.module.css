@@ -29,6 +29,7 @@
   color: white;
   font-size: 1rem;
   font-weight: 200;
+  text-align: justify;
   line-height: 1.5rem;
 }
 .cuisine button {
@@ -79,8 +80,7 @@
   }
   .goalsImg img {
     padding: 1rem;
-    height:60dvh;
-    width: 90dvw;
+    width: 90vw;
     object-fit: cover;
   }
   .drinkImg {
