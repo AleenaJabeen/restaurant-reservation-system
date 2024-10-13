@@ -68,7 +68,6 @@
   }
   .chef {
     width: 100vw;
-    height: auto;
     padding: 2rem;
   }
   .chef h2 {
@@ -79,7 +78,7 @@
   }
   .featuresImg img {
     padding: 1rem;
-    height: 75dvh;
+    height: 60dvh;
     width: 90dvw;
   }
   .chefImg {
