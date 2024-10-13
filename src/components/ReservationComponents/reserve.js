@@ -78,26 +78,31 @@ const Reserve = () => {
               />
             </div>
             <div>
-              <input
-                type="date"
-                name="date"
-                value={reservationData.date}
-                onChange={handleChange}
-                placeholder="mm/dd/yyyy"
-                onfocus="(this.type='date')" 
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="time"
-                name="time"
-                value={reservationData.time}
-                onChange={handleChange}
-               placeholder="hh:mm" onfocus="(this.type='time')"
-                required
-              />
-            </div>
+  <input
+    type={reservationData.date ? 'date' : 'text'}
+    name="date"
+    value={reservationData.date}
+    onChange={handleChange}
+    onFocus={(e) => e.target.type = 'date'}
+    onBlur={(e) => !e.target.value && (e.target.type = 'text')}
+    placeholder="Date"
+    required
+  />
+</div>
+
+<div>
+  <input
+    type={reservationData.time ? 'time' : 'text'}
+    name="time"
+    value={reservationData.time}
+    onChange={handleChange}
+    onFocus={(e) => e.target.type = 'time'}
+    onBlur={(e) => !e.target.value && (e.target.type = 'text')}
+    placeholder="Time"
+    required
+  />
+</div>
+
             <div>
               <input
                 type="number"
