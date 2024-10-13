@@ -55,4 +55,7 @@ footer {
   .address {
     width: 100vw;
   }
+  .brand hr{
+    margin: .25rem;
+  }
 }

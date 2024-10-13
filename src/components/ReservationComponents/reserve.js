@@ -51,7 +51,7 @@ const Reserve = () => {
   };
 
   return (
-    <section id="reservations" className={styles.reserveSection}>
+    <section className={styles.reserveSection}>
       <h2>RESERVE</h2>
       <div className={styles.reservationForm}>
         <div className={styles.formInputs}>

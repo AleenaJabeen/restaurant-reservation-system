@@ -76,14 +76,17 @@ input:focus {
   }
   .reservationForm {
     flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
   }
   .formInputs {
     width: 100vw;
   }
+  
   .reserveImg img {
     border-radius: 0;
   }
   .formInputs input {
-    width: 100%;
+    width: 80svw;
   }
 }
