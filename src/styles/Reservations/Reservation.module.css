@@ -40,6 +40,17 @@
   border-bottom: 2px solid white;
   padding: 0.5rem;
 }
+input::placeholder{
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+input[type="date"],input[type="time"]::placeholder {
+  color:white;
+  appearance: auto; /* Ensure the browser default styling is respected */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Mozilla browsers */
+}
 
 .formInputs label {
   font-size: 1.5rem;

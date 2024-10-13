@@ -64,21 +64,26 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .featuresSection {
     flex-wrap: wrap-reverse;
   }
   .chef {
     width: 100vw;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
   }
   .chef h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
   .chef h3 {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.75rem;
   }
   .featuresImg img {
     padding: 1rem;
+    height: 60vh;
     width: 90vw;
   }
   .chefImg {
