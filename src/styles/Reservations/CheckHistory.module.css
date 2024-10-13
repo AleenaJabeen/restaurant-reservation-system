@@ -1,7 +1,7 @@
 .historySection {
   background-color: rgb(25, 105, 89);
   min-height: 100vh;
-  padding: 3rem;
+  padding: 3rem 1rem;
 }
 .historySection h2 {
   font-size: 3rem;

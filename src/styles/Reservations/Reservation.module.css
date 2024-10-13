@@ -16,7 +16,7 @@
   font-size: 2.5rem;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem ;
 }
 .formInputs h2 {
   opacity: 1;
@@ -45,9 +45,6 @@
   font-size: 1.5rem;
   color: white;
 }
-.formInputs textarea {
-  height: auto;
-}
 .reserveBtn button {
   background-color: transparent;
   color: white;
@@ -73,6 +70,10 @@ input:focus {
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
+  .reserveImg img{
+    width: 100vw;
+    padding: 2rem;
+  }
   .reservationForm {
     flex-wrap: wrap-reverse;
   }

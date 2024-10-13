@@ -83,6 +83,7 @@ const Reserve = () => {
                 name="date"
                 value={reservationData.date}
                 onChange={handleChange}
+                placeholder="Date"
                 required
               />
             </div>
@@ -92,6 +93,7 @@ const Reserve = () => {
                 name="time"
                 value={reservationData.time}
                 onChange={handleChange}
+                placeholder="Time"
                 required
               />
             </div>
