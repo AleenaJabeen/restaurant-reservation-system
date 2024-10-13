@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 .cuisine {
   width: 30vw;
@@ -43,8 +44,8 @@
   background-color: rgb(138, 138, 61);
 }
 .goalsImg img {
-  height: 480px;
-  width: 400px;
+  height: 400px;
+  width: 380px;
 }
 .goalsImg .drinkImg {
   height: 140px;
@@ -52,7 +53,7 @@
   object-fit: cover;
   position: absolute;
   z-index: 1;
-  top: 330%;
+  top: 290%;
   left: 42%;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;

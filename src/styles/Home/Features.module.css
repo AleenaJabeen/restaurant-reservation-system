@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 1rem;
 }
 .chef {
   width: 30vw;
@@ -43,8 +44,8 @@
   background-color: rgb(138, 138, 61);
 }
 .featuresImg img {
-  height: 480px;
-  width: 400px;
+  height: 400px;
+  width: 380px;
   object-fit: cover;
 }
 .featuresImg .chefImg {
@@ -53,7 +54,7 @@
   object-fit: cover;
   position: absolute;
   z-index: 1;
-  top: 230%;
+  top: 210%;
   right: 42%;
 }
 /* Media query for responsive design */
