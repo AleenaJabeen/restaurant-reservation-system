@@ -25,6 +25,9 @@
 }
 /* Media query for responsive design */
 @media screen and (max-width: 768px) {
+  .aboutSection{
+    height: 100vh;
+  }
   .aboutSection h2 {
     font-size: 1.5rem;
     padding: 1rem;

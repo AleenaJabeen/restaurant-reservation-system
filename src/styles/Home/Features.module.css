@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 100dvh;
 }
 .chef {
   width: 30vw;
